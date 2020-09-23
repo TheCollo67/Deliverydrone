@@ -1,4 +1,4 @@
-#VRML_SIM R2020a utf8
+#VRML_SIM R2020b utf8
 WorldInfo {
   info [
     "Delivery drone will deliver a package to a house in a rural area."
@@ -10,6 +10,7 @@ WorldInfo {
     linear 0.5
     angular 0.5
   }
+  coordinateSystem "NUE"
 }
 Viewpoint {
   orientation -0.1311667077009243 0.9476359938926391 0.29117231645541164 2.1418750299287126
@@ -18,7 +19,7 @@ Viewpoint {
   followSmoothness 0.2
 }
 TexturedBackground {
-  texture "noon_cloudy_empty"
+  texture "noon_cloudy_countryside"
   skyColor [
     0 0 0.9
   ]
