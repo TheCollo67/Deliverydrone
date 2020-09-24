@@ -1,0 +1,72 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "Delivery drone will deliver a package to a house in a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "Delivery Drone"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.330480656070415 0.9225631303589598 0.19914770012617522 4.895771965711975
+  position -74.6092670273976 45.577413640199374 72.39532544565071
+  near 0.2
+  followSmoothness 0.2
+}
+TexturedBackground {
+  texture "noon_cloudy_countryside"
+  skyColor [
+    0 0 0.9
+  ]
+}
+TexturedBackgroundLight {
+  texture "noon_cloudy_empty"
+}
+Floor {
+  size 400 400
+  tileSize 6 6
+  appearance SandyGround {
+    colorOverride 0 1 0
+  }
+}
+Wheelbarrow {
+  translation 15.8 0.23 30.72
+}
+StraightRoadSegment {
+  translation 0 0.01 5
+  name "road(1)"
+  width 3
+  numberOfLanes 1
+  roadBorderHeight 0.1
+  startingRoadBorderWidth 0
+  endingRoadBorderWidth 0
+  length 32
+}
+Road {
+  translation -108 0.02 -1
+  rotation 0 1 0 1.1781
+  width 3
+  speedLimit 0
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    0 0 100
+    200 0 200
+  ]
+  splineSubdivision 8
+  appearance Pavement {
+  }
+}
+HouseWithGarage {
+  translation 5.48 0.15 43.34
+}
+Tree {
+  translation 8 0 10
+  scale 1 8 2
+}
