@@ -13,8 +13,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.1311667077009243 0.9476359938926391 0.29117231645541164 2.1418750299287126
-  position 101.22488768378173 75.90602967797935 -49.2347741926948
+  orientation 0.330480656070415 0.9225631303589598 0.19914770012617522 4.895771965711975
+  position -74.6092670273976 45.577413640199374 72.39532544565071
   near 0.2
   followSmoothness 0.2
 }
@@ -38,17 +38,17 @@ Wheelbarrow {
   translation 15.8 0.23 30.72
 }
 StraightRoadSegment {
-  translation 0 1 8
+  translation 0 0.01 5
   name "road(1)"
   width 3
   numberOfLanes 1
   roadBorderHeight 0.1
   startingRoadBorderWidth 0
   endingRoadBorderWidth 0
-  length 28
+  length 32
 }
 Road {
-  translation -108 1 -1
+  translation -108 0.02 -1
   rotation 0 1 0 1.1781
   width 3
   speedLimit 0
