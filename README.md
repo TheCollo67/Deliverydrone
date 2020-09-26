@@ -25,7 +25,7 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
   - Safe zones on properties
   - Obstacles the drone must avoid
 
-#### Product Backlog(for Sprint2: 9/25-9/28)
+## Product Backlog(for Sprint2: 9/25-9/28)
 
 *1. Drone*
   1. Use what was learned from DJI Mavic 2 Pro controller to decide on sensors - Ben
@@ -41,15 +41,15 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
   2. Modify controller to use propellers to lift
   3. Modify controller to receive information from supervisor
   4. Modify controller to act on information from supervisor
-    * ...by raising to target altitude
-    * ...by moving to safe delivery zone
-    * ... by lowering to the ground
+    - ...by raising to target altitude
+    - ...by moving to safe delivery zone
+    - ... by lowering to the ground
 
 *4. Github*
   1. Add Product Backlog to README.md (See markdown guidelines: <https://guides.github.com/features/mastering-markdown/>) - Mengyao
   2. Add screenshot of environment to README.md - Paul
 
-##### Product Backlog(for Sprint1: 9/21-9/24)
+## Product Backlog(for Sprint1: 9/21-9/24)
 
 *1. Drone*
   1. Decide on style of drone (eg. quadrocopter) - everyone
