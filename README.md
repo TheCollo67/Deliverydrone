@@ -28,12 +28,12 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
 ## Product Backlog(for Sprint 2: 9/25-9/28)
 
 *1. Drone*
-  1. Use what was learned from DJI Mavic 2 Pro controller to decide on sensors - Ben
+  1. Use what was learned from DJI Mavic 2 Pro controller to decide on sensors - **Ben**
   2. Build prototype drone
   
 *2. Environment*
-  1. Add safe delivery zone (as flat area of different colour) - Paul
-  2. Add supervisor which can send drone location to drone (See week 4 tasks) - Mayank
+  1. Add safe delivery zone (as flat area of different colour) - **Paul**
+  2. Add supervisor which can send drone location to drone (See week 4 tasks) - **Mayank**
   3. Modify supervisor to send safe landing zone information
 
 *3. Controller*
@@ -46,37 +46,37 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
       * ... by lowering to the ground
 
 *4. Github*
-  1. Add Product Backlog to README.md (See markdown guidelines: <https://guides.github.com/features/mastering-markdown/>) - Mengyao
-  2. Add screenshot of environment to README.md - Paul
+  1. Add Product Backlog to README.md (See markdown guidelines: <https://guides.github.com/features/mastering-markdown/>) - **Mengyao**
+  2. Add screenshot of environment to README.md - **Paul**
 
 ## Product Backlog(for Sprint 1: 9/21-9/24)
 
 *1. Drone*
-  1. Decide on style of drone(eg. quadrocopter) - Everyone
+  1. Decide on style of drone(eg. quadrocopter) - **Everyone**
       * Research necessary components based on requirments
-  2. Decide on representation of packages - Mayank 
+  2. Decide on representation of packages - **Mayank** 
       * Research effect of weight on flight
       * Consider how to measure weight
       * Add weight to drone design 
-  3. Decide on sensors - Ben
+  3. Decide on sensors - **Ben**
   4. Build drone
 
 *2. Environment*
   1. Decide on representation of properties
-  2. Decide on representation of safe delivery zones - Ben
+  2. Decide on representation of safe delivery zones - **Ben**
       * Research detection methods 
-  3. Build environment in Webots - Paul
+  3. Build environment in Webots - **Paul**
   
 *3. Controller*
   1. Gather examples of Webots controllers for quadcopters
-  2. Create DJI Mavic 2 Pro controller in Python - Ben
+  2. Create DJI Mavic 2 Pro controller in Python - **Ben**
 
 *4. Git repository*
-  1. Create Git repository on GitHub - Paul
-  2. Ensure all members can access and modify repository - Everyone
+  1. Create Git repository on GitHub - **Paul**
+  2. Ensure all members can access and modify repository - **Everyone**
 
 *5. Webots project*
-  1. Create Webots project - Ben
+  1. Create Webots project - **Ben**
       * Upload to GitHub (depends: 4.1)
 
   
