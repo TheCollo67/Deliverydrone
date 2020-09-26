@@ -41,9 +41,9 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
   2. Modify controller to use propellers to lift
   3. Modify controller to receive information from supervisor
   4. Modify controller to act on information from supervisor
-    * ...by raising to target altitude
-    * ...by moving to safe delivery zone
-    * ... by lowering to the ground
+      * ...by raising to target altitude
+      * ...by moving to safe delivery zone
+      * ... by lowering to the ground
 
 *4. Github*
   1. Add Product Backlog to README.md (See markdown guidelines: <https://guides.github.com/features/mastering-markdown/>) - Mengyao
@@ -53,18 +53,18 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
 
 *1. Drone*
   1. Decide on style of drone(eg. quadrocopter) - everyone
-  * Research necessary components based on requirments
-  2. Decide on representation of packages - Mayank
-  * Research effect of weight on flight
-  * Consider how to measure weight
-  * Add weight to drone design
+      * Research necessary components based on requirments
+  2. Decide on representation of packages 
+      * Research effect of weight on flight
+      * Consider how to measure weight
+      * Add weight to drone design - Mayank
   3. Decide on sensors - Ben
   4. Build drone
 
 *2. Environment*
   1. Decide on representation of properties
-  2. Decide on representation of safe delivery zones - Ben
-  * Research detection methods
+  2. Decide on representation of safe delivery zones
+      * Research detection methods - Ben
   3. Build environment in Webots - Paul
   
 *3. Controller*
@@ -76,8 +76,8 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
   2. Ensure all members can access and modify repository - Everyone
 
 *5. Webots project*
-  1. Create Webots project - Ben 
-  * Upload to GitHub (depends: 4.1)
+  1. Create Webots project 
+      * Upload to GitHub (depends: 4.1) - Ben
 
   
   
