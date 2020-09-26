@@ -64,8 +64,7 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
 *2. Environment*
   1. Decide on representation of properties
   2. Decide on representation of safe delivery zones - Ben
-  
-    * Research detection methods
+  * Research detection methods
   3. Build environment in Webots - Paul
   
 *3. Controller*
@@ -78,7 +77,7 @@ Additional goals: (1) Once it has taken off, the drone will take a picture to pr
 
 *5. Webots project*
   1. Create Webots project - Ben 
-    * Upload to GitHub (depends: 4.1)
+  * Upload to GitHub (depends: 4.1)
 
   
   
