@@ -1,4 +1,4 @@
-#VRML_SIM R2020b utf8
+#VRML_SIM R2020a utf8
 WorldInfo {
   info [
     "Delivery drone will deliver a package to a house in a rural area."
@@ -10,11 +10,10 @@ WorldInfo {
     linear 0.5
     angular 0.5
   }
-  coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.330480656070415 0.9225631303589598 0.19914770012617522 4.895771965711975
-  position -74.6092670273976 45.577413640199374 72.39532544565071
+  orientation 0.03905731557539657 0.9272354626525767 0.37243646827278587 3.192366324582825
+  position -21.183069516887063 80.93664087173673 -60.05098927856272
   near 0.2
   followSmoothness 0.2
 }
@@ -60,8 +59,7 @@ Road {
     200 0 200
   ]
   splineSubdivision 8
-  appearance Pavement {
-  }
+  appearance NULL
 }
 HouseWithGarage {
   translation 5.48 0.15 43.34
@@ -69,4 +67,50 @@ HouseWithGarage {
 Tree {
   translation 8 0 10
   scale 1 8 2
+}
+Solid {
+  translation -7.71 -0.04 22.64
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        baseColorMap ImageTexture {
+          url [
+            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_base_color.jpg"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_roughness.jpg"
+          ]
+        }
+        metalnessMap ImageTexture {
+          url [
+            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_metalness.jpg"
+          ]
+        }
+        normalMap ImageTexture {
+          url [
+            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_normal.jpg"
+          ]
+        }
+        occlusionMap ImageTexture {
+          url [
+            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_occlusion.jpg"
+          ]
+        }
+        emissiveColor 0 0 0.9
+      }
+      geometry DEF MANHOLE_BOX Box {
+        size 4 0.1 4
+      }
+    }
+  ]
+  name "manhole"
+  model "manhole"
+  boundingObject USE MANHOLE_BOX
+  recognitionColors [
+    0 0 0.9
+  ]
+  translationStep 0.1
 }
