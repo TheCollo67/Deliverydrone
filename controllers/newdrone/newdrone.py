@@ -32,20 +32,26 @@ rear_left_motor = delivery_drone.getMotor("rear left propeller")
 rear_right_motor = delivery_drone.getMotor("rear right propeller")
 motors = [front_left_motor, front_right_motor, rear_left_motor, rear_right_motor]
 
-
-
 for motor in motors:
     motor.setPosition(float('inf'))
     motor.setVelocity(0.0)
     
 wait = int(delivery_drone.getTime())
 while delivery_drone.step(timestep) != -1:
-    if wait + 5 < int(delivery_drone.getTime()):
+    if wait + 1 < int(delivery_drone.getTime()):
         break
 
-for motor in motors:
-    motor.setPosition(float('inf'))
-    motor.setVelocity(0.3)
+front_left_motor.setPosition(float('inf'))
+front_left_motor.setVelocity(100.0)
+
+front_right_motor.setPosition(float('inf'))
+front_right_motor.setVelocity(-100.0)
+
+rear_left_motor.setPosition(float('inf'))
+rear_left_motor.setVelocity(-100.0)
+
+rear_right_motor.setPosition(float('inf'))
+rear_right_motor.setVelocity(100.0)
     
 wait = int(delivery_drone.getTime())
 while delivery_drone.step(timestep) != -1:
@@ -56,13 +62,13 @@ while delivery_drone.step(timestep) != -1:
 #k_vertical_thrust = 68.5;  # with this thrust, the drone lifts.
 #k_vertical_offset = 0.6;   # Vertical offset where the robot actually targets to stabilize itself.
 #k_vertical_p = 3.0;        # P constant of the vertical PID.
-#k_roll_p = 50;           # P constant of the roll PID.
+#k_roll_p = 50;             # P constant of the roll PID.
 #k_pitch_p = 30.0;          # P constant of the pitch PID.
 
-k_vertical_thrust = 0.2;  # with this thrust, the drone lifts.
-k_vertical_offset = 0.6   # Vertical offset where the robot actually targets to stabilize itself.
+k_vertical_thrust = 68.5;  # with this thrust, the drone lifts.
+k_vertical_offset = 0.0    # Vertical offset where the robot actually targets to stabilize itself.
 k_vertical_p = 3.0;        # P constant of the vertical PID.
-k_roll_p = 50.0;           # P constant of the roll PID.
+k_roll_p = 0.0;           # P constant of the roll PID.
 k_pitch_p = 30.0;          # P constant of the pitch PID.
 
 target_altitude = 1.0
@@ -89,7 +95,7 @@ while delivery_drone.step(timestep) != -1:
     yaw_disturbance = 0.0;
     
     # This is where the robot thinks it is in Y
-    altitude = 1.0
+    altitude = 0.9
 
     # THINK
     roll_input = k_roll_p * clamp(roll, -1.0, 1.0) + roll_acceleration + roll_disturbance
@@ -104,9 +110,9 @@ while delivery_drone.step(timestep) != -1:
     rear_left_motor_input = k_vertical_thrust + vertical_input - roll_input + pitch_input - yaw_input;
     rear_right_motor_input = k_vertical_thrust + vertical_input + roll_input + pitch_input + yaw_input;
     
-    front_left_motor.setVelocity(front_left_motor_input/4)
-    front_right_motor.setVelocity(-front_right_motor_input/4)
-    rear_left_motor.setVelocity(-rear_left_motor_input/4)
-    rear_right_motor.setVelocity(rear_right_motor_input/4)
+    front_left_motor.setVelocity(front_left_motor_input)
+    front_right_motor.setVelocity(-front_right_motor_input)
+    rear_left_motor.setVelocity(-rear_left_motor_input)
+    rear_right_motor.setVelocity(rear_right_motor_input)
     
     pass

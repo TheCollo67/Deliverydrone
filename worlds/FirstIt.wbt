@@ -70,3 +70,317 @@ Tree {
   translation 8 0 10
   scale 1 8 2
 }
+Robot {
+  translation 0.09999999999999998 0.004980380000000001 0.1
+  rotation 0.5724251167224025 0.7830301939072363 -0.24329652931133217 -2.7267268273935943e-17
+  children [
+    InertialUnit {
+    }
+    Gyro {
+    }
+    DEF FL Propeller {
+      shaftAxis 0 1 0
+      centerOfThrust 0.1 0 -0.1
+      device RotationalMotor {
+        name "front left propeller"
+        maxVelocity 10000
+      }
+      fastHelix Solid {
+        translation 0.1 0 -0.1
+        children [
+          DEF PROPELLER Shape {
+            appearance DEF FAST_HELIX_APPEARANCE PBRAppearance {
+              transparency 0.5
+              roughness 0.5
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.003
+              radius 0.145
+              side FALSE
+              subdivision 24
+            }
+          }
+        ]
+      }
+      slowHelix Solid {
+        translation 0.1 0 -0.1
+        rotation 0 -1 0 5.534002688312774
+        children [
+          DEF SLOW_TAIL_HELIX Transform {
+            rotation 1 0 0 1.5708
+            children [
+              DEF SLOW_TAIL_HELIX_GROUP Group {
+                children [
+                  DEF HUB Shape {
+                    appearance DEF BLACK_METAL PBRAppearance {
+                      baseColor 0 0 0
+                      roughness 1.1102230246251565e-16
+                      metalness 0
+                    }
+                    geometry Capsule {
+                      height 0.01
+                      radius 0.01
+                    }
+                  }
+                  DEF BLADE_PITCH_AXIS Shape {
+                    appearance USE BLACK_METAL
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.004
+                    }
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 0.04 0
+                    rotation 0 1 0 0.3618
+                    children [
+                      DEF BLADE_SHAPE Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.8 0.8 0.8
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.006 0.03 0.002
+                        }
+                      }
+                    ]
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 -0.04 0
+                    rotation 0 1 0 -0.3618
+                    children [
+                      USE BLADE_SHAPE
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+    DEF FR Propeller {
+      shaftAxis 0 1 0
+      centerOfThrust 0.1 0 0.1
+      device RotationalMotor {
+        name "front right propeller"
+        maxVelocity 10000
+      }
+      fastHelix Solid {
+        translation 0.1 0 0.1
+        children [
+          USE PROPELLER
+        ]
+      }
+      slowHelix Solid {
+        translation 0.1 0 0.1
+        rotation 0 -1 0 0.564352099242385
+        children [
+          DEF SLOW_TAIL_HELIX Transform {
+            rotation 1 0 0 1.5708
+            children [
+              DEF SLOW_TAIL_HELIX_GROUP Group {
+                children [
+                  DEF HUB Shape {
+                    appearance DEF BLACK_METAL PBRAppearance {
+                      baseColor 0 0 0
+                      roughness 1.1102230246251565e-16
+                      metalness 0
+                    }
+                    geometry Capsule {
+                      height 0.01
+                      radius 0.01
+                    }
+                  }
+                  DEF BLADE_PITCH_AXIS Shape {
+                    appearance USE BLACK_METAL
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.004
+                    }
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 0.04 0
+                    rotation 0 1 0 0.3618
+                    children [
+                      DEF BLADE_SHAPE Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.8 0.8 0.8
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.006 0.03 0.002
+                        }
+                      }
+                    ]
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 -0.04 0
+                    rotation 0 1 0 -0.3618
+                    children [
+                      USE BLADE_SHAPE
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+    DEF RL Propeller {
+      shaftAxis 0 1 0
+      centerOfThrust -0.1 0 -0.1
+      device RotationalMotor {
+        name "rear left propeller"
+        maxVelocity 10000
+      }
+      fastHelix Solid {
+        translation -0.1 0 -0.1
+        children [
+          USE PROPELLER
+        ]
+      }
+      slowHelix Solid {
+        translation -0.1 0 -0.1
+        rotation 0 1 0 0.9496618077086565
+        children [
+          DEF SLOW_TAIL_HELIX Transform {
+            rotation 1 0 0 1.5708
+            children [
+              DEF SLOW_TAIL_HELIX_GROUP Group {
+                children [
+                  DEF HUB Shape {
+                    appearance DEF BLACK_METAL PBRAppearance {
+                      baseColor 0 0 0
+                      roughness 1.1102230246251565e-16
+                      metalness 0
+                    }
+                    geometry Capsule {
+                      height 0.01
+                      radius 0.01
+                    }
+                  }
+                  DEF BLADE_PITCH_AXIS Shape {
+                    appearance USE BLACK_METAL
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.004
+                    }
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 0.04 0
+                    rotation 0 1 0 0.3618
+                    children [
+                      DEF BLADE_SHAPE Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.8 0.8 0.8
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.006 0.03 0.002
+                        }
+                      }
+                    ]
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 -0.04 0
+                    rotation 0 1 0 -0.3618
+                    children [
+                      USE BLADE_SHAPE
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+    DEF RR Propeller {
+      shaftAxis 0 1 0
+      centerOfThrust -0.1 0 0.1
+      device RotationalMotor {
+        name "rear right propeller"
+        maxVelocity 10000
+      }
+      fastHelix Solid {
+        translation -0.1 0 0.1
+        children [
+          USE PROPELLER
+        ]
+      }
+      slowHelix Solid {
+        translation -0.1 0 0.1
+        rotation 0 -1 0 5.16077797621051
+        children [
+          DEF SLOW_TAIL_HELIX Transform {
+            rotation 1 0 0 1.5708
+            children [
+              DEF SLOW_TAIL_HELIX_GROUP Group {
+                children [
+                  DEF HUB Shape {
+                    appearance DEF BLACK_METAL PBRAppearance {
+                      baseColor 0 0 0
+                      roughness 1.1102230246251565e-16
+                      metalness 0
+                    }
+                    geometry Capsule {
+                      height 0.01
+                      radius 0.01
+                    }
+                  }
+                  DEF BLADE_PITCH_AXIS Shape {
+                    appearance USE BLACK_METAL
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.004
+                    }
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 0.04 0
+                    rotation 0 1 0 0.3618
+                    children [
+                      DEF BLADE_SHAPE Shape {
+                        appearance PBRAppearance {
+                          baseColor 0.8 0.8 0.8
+                          roughness 1
+                          metalness 0
+                        }
+                        geometry Box {
+                          size 0.006 0.03 0.002
+                        }
+                      }
+                    ]
+                  }
+                  DEF RIGHT_BLADE Transform {
+                    translation 0 -0.04 0
+                    rotation 0 1 0 -0.3618
+                    children [
+                      USE BLADE_SHAPE
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.1 0.01 0.1
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "newdrone"
+}
