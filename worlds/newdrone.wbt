@@ -1,76 +1,20 @@
-#VRML_SIM R2020a utf8
+#VRML_SIM R2020b utf8
 WorldInfo {
-  info [
-    "Delivery drone will deliver a package to a house in a rural area."
-    "After the drone has taken off, you can control it with the keyboard of your computer."
-  ]
-  title "Delivery Drone"
-  basicTimeStep 8
-  defaultDamping Damping {
-    linear 0.5
-    angular 0.5
-  }
+  coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.03905731557539657 0.9272354626525767 0.37243646827278587 3.192366324582825
-  position -21.183069516887063 80.93664087173673 -60.05098927856272
-  near 0.2
-  followSmoothness 0.2
+  orientation -0.9886202756980692 -0.14498250836405066 -0.04012508874933063 0.5459132120711018
+  position -0.784446670966857 1.684568948689861 3.005678322878047
 }
-TexturedBackground {
-  texture "noon_cloudy_countryside"
+Background {
   skyColor [
-    0 0 0.9
+    0.15 0.45 1
   ]
-}
-TexturedBackgroundLight {
-  texture "noon_cloudy_empty"
 }
 Floor {
-  size 400 400
-  tileSize 6 6
-  appearance SandyGround {
-    colorOverride 0 1 0
-  }
-}
-Wheelbarrow {
-  translation 15.8 0.23 30.72
-}
-StraightRoadSegment {
-  translation 0 0.01 5
-  name "road(1)"
-  width 3
-  numberOfLanes 1
-  roadBorderHeight 0.1
-  startingRoadBorderWidth 0
-  endingRoadBorderWidth 0
-  length 32
-}
-Road {
-  translation -108 0.02 -1
-  rotation 0 1 0 1.1781
-  width 3
-  speedLimit 0
-  rightBorder FALSE
-  leftBorder FALSE
-  wayPoints [
-    0 0 0
-    0 0 100
-    200 0 200
-  ]
-  splineSubdivision 8
-  appearance NULL
-}
-HouseWithGarage {
-  translation 5.48 0.15 43.34
-}
-Tree {
-  translation 8 0 10
-  scale 1 8 2
 }
 Robot {
-  translation 0.09999999999999998 0.004980380000000001 0.1
-  rotation 0.5724251167224025 0.7830301939072363 -0.24329652931133217 -2.7267268273935943e-17
+  translation 0 0.5 0
   children [
     InertialUnit {
     }
@@ -81,7 +25,6 @@ Robot {
       centerOfThrust 0.1 0 -0.1
       device RotationalMotor {
         name "front left propeller"
-        maxVelocity 10000
       }
       fastHelix Solid {
         translation 0.1 0 -0.1
@@ -103,7 +46,6 @@ Robot {
       }
       slowHelix Solid {
         translation 0.1 0 -0.1
-        rotation 0 -1 0 5.534002688312774
         children [
           DEF SLOW_TAIL_HELIX Transform {
             rotation 1 0 0 1.5708
@@ -163,7 +105,6 @@ Robot {
       centerOfThrust 0.1 0 0.1
       device RotationalMotor {
         name "front right propeller"
-        maxVelocity 10000
       }
       fastHelix Solid {
         translation 0.1 0 0.1
@@ -173,7 +114,6 @@ Robot {
       }
       slowHelix Solid {
         translation 0.1 0 0.1
-        rotation 0 -1 0 0.564352099242385
         children [
           DEF SLOW_TAIL_HELIX Transform {
             rotation 1 0 0 1.5708
@@ -233,7 +173,6 @@ Robot {
       centerOfThrust -0.1 0 -0.1
       device RotationalMotor {
         name "rear left propeller"
-        maxVelocity 10000
       }
       fastHelix Solid {
         translation -0.1 0 -0.1
@@ -243,7 +182,6 @@ Robot {
       }
       slowHelix Solid {
         translation -0.1 0 -0.1
-        rotation 0 1 0 0.9496618077086565
         children [
           DEF SLOW_TAIL_HELIX Transform {
             rotation 1 0 0 1.5708
@@ -303,7 +241,6 @@ Robot {
       centerOfThrust -0.1 0 0.1
       device RotationalMotor {
         name "rear right propeller"
-        maxVelocity 10000
       }
       fastHelix Solid {
         translation -0.1 0 0.1
@@ -313,7 +250,6 @@ Robot {
       }
       slowHelix Solid {
         translation -0.1 0 0.1
-        rotation 0 -1 0 5.16077797621051
         children [
           DEF SLOW_TAIL_HELIX Transform {
             rotation 1 0 0 1.5708
@@ -381,49 +317,4 @@ Robot {
   physics Physics {
   }
   controller "newdrone"
-Solid {
-  translation -7.71 -0.04 22.64
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0 0 1
-        baseColorMap ImageTexture {
-          url [
-            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_base_color.jpg"
-          ]
-        }
-        roughnessMap ImageTexture {
-          url [
-            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_roughness.jpg"
-          ]
-        }
-        metalnessMap ImageTexture {
-          url [
-            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_metalness.jpg"
-          ]
-        }
-        normalMap ImageTexture {
-          url [
-            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_normal.jpg"
-          ]
-        }
-        occlusionMap ImageTexture {
-          url [
-            "C:/Users/Admin/AppData/Local/Programs/Webots/projects/objects/factory/manhole/protos/textures/manhole_occlusion.jpg"
-          ]
-        }
-        emissiveColor 0 0 0.9
-      }
-      geometry DEF MANHOLE_BOX Box {
-        size 4 0.1 4
-      }
-    }
-  ]
-  name "manhole"
-  model "manhole"
-  boundingObject USE MANHOLE_BOX
-  recognitionColors [
-    0 0 0.9
-  ]
-  translationStep 0.1
 }
