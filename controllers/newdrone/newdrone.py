@@ -34,7 +34,7 @@ motors = [front_left_motor, front_right_motor, rear_left_motor, rear_right_motor
 
 for motor in motors:
     motor.setPosition(float('inf'))
-    motor.setVelocity(0.0)
+    motor.setVelocity(1.0)
     
 wait = int(delivery_drone.getTime())
 while delivery_drone.step(timestep) != -1:
